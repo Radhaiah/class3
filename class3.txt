@@ -1,0 +1,125 @@
+1.For the given JSON iterate over all for loops (for, for in, for of, forEach)
+
+var obj=[
+    {
+        name:"Radhaiah",
+        mobile:7675852326,
+        mail:"muthakanaradhaiah@gmail.com",
+        dob:"18-mar-1996",
+        hobies:{
+                game1:"cricket",
+                game2:"coocking",
+                game3:"reading",
+        },
+        addrress:{
+            area:"vasavi nagar",
+            city:"guntur",
+            state:"AP",
+            pincode:"522001",
+        },
+        studies:{
+            ssc:{
+                school:"modern public school",
+                garde:"8.5",
+                board:"SSC",
+            },
+            inter:{
+                college:"NRI",
+                grades:"889",
+                board:"BIEAP",
+            },
+            ug:{
+                college:"LBRCE",
+                grade:"8.143",
+                board:"JNTUK",
+            },
+        },
+        project:{
+            pro1:"javascript",
+            pro2:"html",
+            pro3:"json",
+        }
+    }
+]
+//normal for loop
+for(var i=0;i<obj.length;i++)
+{
+    console.log(obj[i]);
+}
+//for each loop
+obj.forEach((ele)=>{
+    console.log(ele.name);
+}
+);
+//for in loop it will read value by using index in the array
+for(var i in obj){
+    console.log(obj[i].addrress);
+}
+// for of loop will read the values directly without using index in the array
+for(var i of obj){
+         console.log(i.addrress);
+     }
+
+2.Create your own resume data in JSON format
+
+var obj=[
+    {
+        name:"Radhaiah",
+        mobile:7675852326,
+        mail:"muthakanaradhaiah@gmail.com",
+        dob:"18-mar-1996",
+        hobies:{
+                h1:"cricket",
+                h2:"coocking",
+                h3:"reading",
+        },
+        addrress:{
+            area:"vasavi nagar",
+            city:"guntur",
+            state:"AP",
+            pincode:"522001",
+        },
+        studies:{
+            ssc:{
+                school:"modern public school",
+                garde:"8.5",
+                board:"SSC",
+            },
+            inter:{
+                college:"NRI",
+                grades:"889",
+                board:"BIEAP",
+            },
+            ug:{
+                college:"LBRCE",
+                grade:"8.143",
+                board:"JNTUK",
+            },
+        },
+        project:{
+            pro1:"javascript",
+            pro2:"html",
+            pro3:"json",
+        }
+    }
+]
+for(var i=0;i<obj.length;i++)
+{
+    console.log(obj[i]);
+};
+
+3.Read about the difference between window, screen and document in javascript
+
+Window is the main JavaScript object root, aka the global object in a browser,
+and it can also be treated as the root of the document object model. You can 
+access it as window.
+
+window.screen or just screen is a small information object about physical 
+screen dimensions.
+
+window.document or just document is the main object of the potentially visible 
+(or better yet: rendered) document object model/DOM.
+
+Since window is the global object, you can reference any properties of it with 
+just the property name - so you do not have to write down window. - 
+it will be figured out by the runtime.
